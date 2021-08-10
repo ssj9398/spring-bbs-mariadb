@@ -29,4 +29,16 @@ public class BoardController {
 		model.addAttribute("list", list);
 
 	}
+	
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public void getwrite() throws Exception{
+		
+	}
+	
+	@RequestMapping(value = "/write", method = RequestMethod.POST)
+	public String PostWrite(BoardVO boardVO) throws Exception{
+		service.write(boardVO);
+		return "redirect:/board/list";
+		
+	}
 }

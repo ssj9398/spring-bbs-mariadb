@@ -7,5 +7,7 @@ import com.board.domain.BoardVO;
 public interface BoardDAO {
 
 	public List list() throws Exception;
+	
+	public void write(BoardVO boardvo) throws Exception;
 
 }

@@ -35,5 +35,8 @@
 		</c:forEach>
 
 	</table>
+	<div class="pt-1 text-right">
+			<button class="btn btn btn-success" type="submit" style="width: 10%; padding: 5px;" onclick="location.href='/board/write';">작성하기</button>
+		</div>
 </body>
 </html>
