@@ -30,4 +30,8 @@ public class BoardDAOImpl implements BoardDAO {
 		
 	}
 
+	public BoardVO view(int bno) throws Exception {
+		return sql.selectOne(namespace+".view", bno);
+	}
+
 }

@@ -27,4 +27,8 @@ public class BoardServiceImpl implements BoardService {
 		
 	}
 
+	public BoardVO view(int bno) throws Exception {
+		return dao.view(bno);
+	}
+
 }

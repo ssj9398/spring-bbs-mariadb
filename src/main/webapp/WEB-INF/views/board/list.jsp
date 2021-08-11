@@ -15,28 +15,28 @@
 			<tr>
 				<th>번호</th>
 				<th>제목</th>
-				<th>작성일</th>
+				<th>내용</th>
 				<th>작성자</th>
 				<th>조회수</th>
+				<th>작성일</th>
 			</tr>
 		</thead>
 
 		<tbody>
-
+			<c:forEach items="${list}" var="list">
+				<tr>
+					<td>${list.bno}</td>
+					<td><a href="/board/view?bno=${list.bno}">${list.title}</a></td>
+					<td>${list.content}</td>
+					<td>${list.writer}</td>
+					<td>${list.viewCnt}</td>
+					<td>${list.regDate}</td>
+				</tr>
+			</c:forEach>
 		</tbody>
-		<c:forEach items="${list}" var="list">
-			<tr>
-				<td>${list.bno}</td>
-				<td>${list.title}</td>
-				<td>${list.regDate}</td>
-				<td>${list.writer}</td>
-				<td>${list.viewCnt}</td>
-			</tr>
-		</c:forEach>
-
 	</table>
 	<div class="pt-1 text-right">
-			<button class="btn btn btn-success" type="submit" style="width: 10%; padding: 5px;" onclick="location.href='/board/write';">작성하기</button>
-		</div>
+		<button class="btn btn btn-success" type="submit" style="width: 10%; padding: 5px;" onclick="location.href='/board/write';">작성하기</button>
+	</div>
 </body>
 </html>
