@@ -37,7 +37,7 @@
 			});
 		</script>
 		<div class="pt-1 text-right">
-			<button class="btn btn btn-success" onclick="location.href='/board'" style="width: 10%; padding: 5px;">목록으로</button>
+			<button class="btn btn btn-success" onclick="location.href='/board/list'" style="width: 10%; padding: 5px;">목록으로</button>
 			<button class="btn btn btn-success" type="submit" style="width: 10%; padding: 5px;">작성하기</button>
 		</div>
 	</form>

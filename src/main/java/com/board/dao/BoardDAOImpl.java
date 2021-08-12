@@ -18,13 +18,13 @@ public class BoardDAOImpl implements BoardDAO {
 	private static String namespace = "com.board.mappers.board";
 
 	// 게시물 목록
-	@Override
+
 	public List list() throws Exception {
 
 		return sql.selectList(namespace + ".list");
 	}
 
-	@Override
+
 	public void write(BoardVO boardvo) throws Exception {
 		sql.insert(namespace + ".write", boardvo);
 		
@@ -32,6 +32,11 @@ public class BoardDAOImpl implements BoardDAO {
 
 	public BoardVO view(int bno) throws Exception {
 		return sql.selectOne(namespace+".view", bno);
+	}
+
+	@Override
+	public void modify(BoardVO vo) throws Exception {
+	 sql.update(namespace + ".modify", vo);
 	}
 
 }
